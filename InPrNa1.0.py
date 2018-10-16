@@ -32,9 +32,14 @@ try:
     import math
 except ImportError:
     print 'Warning: failed to import math. Exit ...'
+try:
+    import Tkinter
+    from Tkinter import *
 
-import Tkinter
-from Tkinter import *
+
+except:
+    import tkinter
+    import _tkinter
 #from Tkinter import ScrolledText
 try:
     import ScrolledText as tkst
@@ -52,6 +57,7 @@ def __init__(self):
 
 class start:
     def __init__(self, app):
+        self.pdbfile = ''
         self.Resn_number = {'ALA': 0,
                             'ARG': 0,
                             'ASN': 0,
@@ -195,22 +201,27 @@ class start:
         self.INTERFACE_DIS_4 = []
         self.INTERFACE_DIS_45 = []
         self.INTERFACE_DIS_6 = []
-
-        self.pdb_file_path = StringVar()
+        # root = Tk()
+        # root.destroy()
+        # self.pdb_file_path = StringVar()
+        # root.destroy()
         self.app1 = app
         self.parent = app.root
         self.dialog = Pmw.Dialog(self.parent,
                                  buttons=('Browse', 'load PDB', 'Cancel'),
                                  command=self.Ask_Dialog_Cmd)
 
-        pdb_load_Ent = Pmw.EntryField(self.dialog.interior(), label_text='PDB file:'
-                                      , labelpos='wn'
-                                      , entry_textvariable=self.pdb_file_path, entry_width=35)
-        pdb_load_Ent.grid(sticky='E')
+        # pdb_load_Ent = Entry(self.dialog.interior(), textvariable=self.pdb_file_path, width=35)
+        self.pdb_load_Ent = Text(self.dialog.interior(),height=1, width=30)
+        # pdb_load_Ent.delete()
+        self.pdb_load_Ent.grid(sticky='E')
 
     def Ask_Dialog_Cmd(self, cmd ):
         if cmd == 'Browse':
-            self.pdb_file_path.set(self.GetPDBFilePath())
+            self.GetPDBFilePath()
+            # self.pdb_file_path.set(self.pdbfile)
+            self.pdb_load_Ent.delete(1.0,Tkinter.END)
+            self.pdb_load_Ent.insert(END,self.pdbfile)
 
 
         elif cmd == 'load PDB':
@@ -276,7 +287,6 @@ class start:
 
     def GetPDBFilePath(self):
         self.pdbfile = tkFileDialog.askopenfilename()
-        return self.pdbfile
 
     def LoadPDB(self, pdbfile):
         if pdbfile is not None:
@@ -411,7 +421,7 @@ class start:
                                 DX_Cell[17:20] == '  T' or \
                                 DX_Cell[17:20] == '  U' or \
                                 DX_Cell[17:20] == '  I' :
-                                # and DX_Cell[13:15] == 'CA':######################################################################CAyu
+                                # and DX_Cell[13:15] == 'CA':
                     # print DX_Cell
                     DX_content.append(DX_Cell)
                 else:
@@ -1237,11 +1247,13 @@ class Plugin:
             if DIS == 6:
                 #print 'sp'
                 self.INFORMATION_SHOW(self.INTERFACE_DIS_6,self.interface6_resn_number)
+            # cmd.hide("everything", "interface")
         except :
             print 'no data input'
         # cmd.disable("INTERFACE")
         # cmd.hide("everything", "interface")
         cmd.show(self.interface_mod, "INTERFACE")
+        cmd.hide('everything', 'interface')
 
     def ch_propert_col(self):
         color_tuple, color = tkColorChooser.askcolor(color=self.property_col)
@@ -1373,20 +1385,24 @@ class Plugin:
 
         for key in resn_list:
             self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-            self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '\n')######################################################################
         #print self.surf_col_tuple
         cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
-        cmd.hide("everything","interface")
+        # print 111111111
+        cmd.hide('everything','interface')
         cmd.delete("INTERFACE1")
         cmd.create("INTERFACE1", resn + ' and ' + resi + ' and ' + chain)
         cmd.enable("INTERFACE1")
         cmd.hide("everything","INTERFACE1")
         cmd.show(self.interface_mod,"INTERFACE1")
         cmd.color('gray')
+
         #cmd.extract("interface","interface")###########################################################################################################################################################
 
         cmd.set_color('surf_col', self.surf_col_tuple)
-        cmd.color('surf_col', 'INTERFACE')
+        cmd.color('surf_col', 'INTERFACE1')
+        # print 2222
+        # cmd.hide('everything', 'interface')
+
 
     def ch_valley_col(self):
         color_tuple, color = tkColorChooser.askcolor(color=self.valley_col)
@@ -1633,7 +1649,7 @@ class Plugin:
         return resn
 
     def GetPDBFilePath(self):
-        pdbfile = tkFileDialog.askopenfilename()
+        self.pdbfile = tkFileDialog.askopenfilename()
         self.pdb_file_path.set(pdbfile)
         # print filePathVar.get()
 
@@ -1695,6 +1711,7 @@ class Plugin:
 
 
 # test
+
 
 if __name__ == '__main__':
     class App:
