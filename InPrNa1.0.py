@@ -1385,6 +1385,7 @@ class Plugin:
 
         for key in resn_list:
             self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
+            self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '\n')
         #print self.surf_col_tuple
         cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
         # print 111111111
