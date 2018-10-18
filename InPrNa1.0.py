@@ -459,7 +459,7 @@ class start:
         self.progress_window.geometry('530x150')
 
         ## 设置下载进度条
-        ttk.Label(self.progress_window, text='Progress:', ).place(x=50, y=60)
+        ttk.Label(self.progress_window, text='Progress:', ).place(x=45, y=60)
         self.canvas = Canvas(self.progress_window, width=465, height=22, bg="white")
         self.fill_line = self.canvas.create_rectangle(1.5, 1.5, 0, 23, width=0, fill="green")
         self.canvas.place(x=110, y=60)
