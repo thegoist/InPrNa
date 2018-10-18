@@ -57,6 +57,7 @@ def __init__(self):
 
 class start:
     def __init__(self, app):
+        ##interface information
         self.pdbfile = ''
         self.Resn_number = {'ALA': 0,
                             'ARG': 0,
@@ -186,6 +187,16 @@ class start:
                                        }
 
 
+        #interface pdb infotmation
+        self.interface6_pdb = []
+        self.interface3_pdb = []
+        self.interface35_pdb = []
+        self.interface4_pdb = []
+        self.interface45_pdb = []
+
+
+
+        ##############
         self.DNA_atom = []
         self.protein_atom = []
 ##############################
@@ -425,8 +436,8 @@ class start:
                     # print DX_Cell
                     DX_content.append(DX_Cell)
                 else:
-      
-                    self.Resn_number[DX_Cell[17:20]] += 1
+                    if DX_Cell[13:15] == 'CA':
+                        self.Resn_number[DX_Cell[17:20]] += 1
                     ATOM_content.append(DX_Cell)
         pdb_content_handle.close()
 
@@ -441,6 +452,7 @@ class start:
                 dis = self.calcu_dis(Atom_cood, DX_cood)
                 if  dis< 6:
                     self.INTERFACE_DIS_6.append(Atom)
+
                     if Atom[13:15] == 'CA':
                       self.interface6_resn_number[Atom[17:20]] += 1
                 if dis < 3:
@@ -933,7 +945,7 @@ class Plugin:
         protein_mod_Lb.grid(sticky='WE', column=0, row=2, padx=5, pady=1)
         self.protein_mod_Cb.grid(sticky='WE', column=1, row=2, padx=5, pady=1)
 
-		####################################
+####################################
 		# nucleic setting
 		###################################
         nucleic_LF = ttk.LabelFrame(page, text='nucleic setting')
@@ -1280,32 +1292,32 @@ class Plugin:
             self.inter_col_but['bg'] = self.surf_col
             self.inter_col_but['activebackground'] = self.surf_col
             self.inter_col_but.update()
-            chain = self.Sel_Chain(INTERFACE_CONTENT)
-            resi = self.Sel_Resi(INTERFACE_CONTENT)
-            resn = self.Sel_Resn(INTERFACE_CONTENT)
-            #print chain
-            #print resi
-            #print resn
-            #print 'ch'
-            # get interface resn
-            resn_list = []
-            chain_list = []
-            resi_list = []
-            for i in INTERFACE_CONTENT:
-                resn_list.append(i[17:20])
-                resi_list.append(i[22:26])
-                chain_list.append(i[21])
-            resn_list = list(set(resn_list))
-            chain_list = list(set(chain_list))
-            resi_list = list(set(resi_list))
+            # chain = self.Sel_Chain(INTERFACE_CONTENT)
+            # resi = self.Sel_Resi(INTERFACE_CONTENT)
+            # resn = self.Sel_Resn(INTERFACE_CONTENT)
+            # #print chain
+            # #print resi
+            # #print resn
+            # #print 'ch'
+            # # get interface resn
+            # resn_list = []
+            # chain_list = []
+            # resi_list = []
+            # for i in INTERFACE_CONTENT:
+            #     resn_list.append(i[17:20])
+            #     resi_list.append(i[22:26])
+            #     chain_list.append(i[21])
+            # resn_list = list(set(resn_list))
+            # chain_list = list(set(chain_list))
+            # resi_list = list(set(resi_list))
 
-            self.Visualization_ScroT.delete(1.0, Tkinter.END)
-            self.Visualization_ScroT.insert(1.0, 'Interface :\n')
-            self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
-
-            for key in resn_list:
-                self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-                self.Visualization_ScroT.insert(Tkinter.INSERT, str(self.Resn_number[key]) + '\n')
+            # self.Visualization_ScroT.delete(1.0, Tkinter.END)
+            # self.Visualization_ScroT.insert(1.0, 'Interface :\n')
+            # self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
+            #
+            # for key in resn_list:
+            #     self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
+            #     self.Visualization_ScroT.insert(Tkinter.INSERT, str(self.Resn_number[key]) + '\n')
 
             #cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
             #cmd.extract("interface","interface")
@@ -1390,7 +1402,11 @@ class Plugin:
 
         for key in resn_list:
             self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-            self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '\n')
+            self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '  ')
+
+        self.Visualization_ScroT.insert(Tkinter.INSERT,'\n\nInteface(pdb origin data):\n')
+        for key in INTERFACE_CONTENT:
+            self.Visualization_ScroT.insert(Tkinter.INSERT,key+'\n')
         #print self.surf_col_tuple
         cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
         # print 111111111
@@ -1402,7 +1418,7 @@ class Plugin:
         cmd.show(self.interface_mod,"INTERFACE1")
         cmd.color('gray')
 
-        #cmd.extract("interface","interface")###########################################################################################################################################################
+        #cmd.extract("interface","interface")
 
         cmd.set_color('surf_col', self.surf_col_tuple)
         cmd.color('surf_col', 'INTERFACE1')
