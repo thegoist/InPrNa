@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import sys
 # pymol lib
 try:
@@ -57,6 +58,7 @@ def __init__(self):
 
 class start:
     def __init__(self, app):
+        self.counter = 0.0
         ##interface information
         self.pdbfile = ''
         self.Resn_number = {'ALA': 0,
@@ -307,14 +309,16 @@ class start:
             ############
             ## Main
             ###########
+            atom_content_dir = self.Open_PDB_content(pdbfile)
             self.All_protein_Atom = self.calcu_durg_pdb_interface(pdbfile)
 
-            self.bump_Classify_all = self.BumpClassify(self.protein_atom,pdbfile)
-            self.bump_Classify_6 = self.BumpClassify(self.INTERFACE_DIS_6, pdbfile)
-            self.bump_Classify_3 = self.BumpClassify(self.INTERFACE_DIS_3, pdbfile)
-            self.bump_Classify_35 = self.BumpClassify(self.INTERFACE_DIS_35, pdbfile)
-            self.bump_Classify_4 = self.BumpClassify(self.INTERFACE_DIS_4, pdbfile)
-            self.bump_Classify_45 = self.BumpClassify(self.INTERFACE_DIS_45, pdbfile)
+            self.bump_Classify_all = self.BumpClassify(self.protein_atom,atom_content_dir)
+            self.bump_Classify_6 = self.BumpClassify(self.INTERFACE_DIS_6, atom_content_dir)
+            self.bump_Classify_3 = self.BumpClassify(self.INTERFACE_DIS_3, atom_content_dir)
+            self.bump_Classify_35 = self.BumpClassify(self.INTERFACE_DIS_35, atom_content_dir)
+            self.bump_Classify_4 = self.BumpClassify(self.INTERFACE_DIS_4, atom_content_dir)
+            self.bump_Classify_45 = self.BumpClassify(self.INTERFACE_DIS_45, atom_content_dir)
+            self.progress_window.destroy()
 
 
 
@@ -422,6 +426,7 @@ class start:
         pdb_content_handle = open(pdb_file_name, 'r')
         for DX_Cell in pdb_content_handle:
             if DX_Cell[0:4] == 'ATOM':
+                self.counter += 1
                 if DX_Cell[17:20] == ' DA' or \
                                 DX_Cell[17:20] == ' DT' or \
                                 DX_Cell[17:20] == ' DG' or \
@@ -444,12 +449,41 @@ class start:
         self.protein_atom = ATOM_content
         self.DNA_atom = DX_content
 
+
+
+###progress tk window
+
+        self.progress_window = Tk()
+
+        self.progress_window.title('Calculating')
+        self.progress_window.geometry('530x150')
+
+        ## 设置下载进度条
+        ttk.Label(self.progress_window, text='Progress:', ).place(x=50, y=60)
+        self.canvas = Canvas(self.progress_window, width=465, height=22, bg="white")
+        self.fill_line = self.canvas.create_rectangle(1.5, 1.5, 0, 23, width=0, fill="green")
+        self.canvas.place(x=110, y=60)
+
+
+
+        x = self.counter  # 未知变量，可更改
+        self.progress_counters = float(465.0/self.counter)  # 是矩形填充满的次数
+        # print  n
+
+##################################
+
         for Atom in ATOM_content:
             Atom_cood = [Atom[30:38], Atom[38:46], Atom[46:54]]
             interface_flag = 0
+            ####progress
+            self.progress_counters = float(self.progress_counters + 465.0 / x)
             for Dx in DX_content:
                 DX_cood = [Dx[30:38], Dx[38:46], Dx[46:54]]
                 dis = self.calcu_dis(Atom_cood, DX_cood)
+
+
+                # print n
+                ######
                 if  dis< 6:
                     self.INTERFACE_DIS_6.append(Atom)
 
@@ -471,6 +505,12 @@ class start:
                     self.INTERFACE_DIS_45.append(Atom)
                     if Atom[13:15] == 'CA':
                       self.interface45_resn_number[Atom[17:20]] += 1
+
+            self.canvas.coords(self.fill_line, (0, 0, self.progress_counters, 60))
+            self.progress_window.update()
+
+
+
 
         #print self.INTERFACE_DIS_3
         #print self.INTERFACE_DIS_35
@@ -496,15 +536,17 @@ class start:
 
         return Euclid_Dis
 
-    def BumpClassify(self, Atom_content, pdb_file_path):
+    def BumpClassify(self, Atom_content, atom_content_dir):
+
         bump_Classify = {'valley':[],
                               'flat':[],
                               'peak':[]}
-        atom_content_dir = self.Open_PDB_content(pdb_file_path)
+
         for Cell in Atom_content:
             # print Cell
             ca_cood = (Cell[30:38], Cell[38:46], Cell[46:54])
             atom_counter = 0
+
             for key in atom_content_dir:
                 coord_2 = (atom_content_dir[key][30:38], atom_content_dir[key][38:46], atom_content_dir[key][46:54])
                 dis = self.calcu_dis(ca_cood, coord_2)
@@ -512,6 +554,7 @@ class start:
                     atom_counter = atom_counter + 1
             CX = self.Calcu_PDB_CA_SI(atom_counter)
             # print CX
+            self.progress_window.update()
             if CX < -0.2:
                 shape = "valley"
                 bump_Classify['valley'].append(Cell)
@@ -1398,15 +1441,18 @@ class Plugin:
 
         self.Visualization_ScroT.delete(1.0, Tkinter.END)
         self.Visualization_ScroT.insert(1.0, 'INTERFACE :\n')
-        self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
+        self.Visualization_ScroT.insert(Tkinter.INSERT, 'There are the total of kinds of amino acids in the interface:\n')
 
         for key in resn_list:
             self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
             self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '  ')
 
         self.Visualization_ScroT.insert(Tkinter.INSERT,'\n\nInteface(pdb origin data):\n')
+        interface_vis = []
         for key in INTERFACE_CONTENT:
-            self.Visualization_ScroT.insert(Tkinter.INSERT,key+'\n')
+            if key not in interface_vis:
+                interface_vis.append(key)
+                self.Visualization_ScroT.insert(Tkinter.INSERT,key+'\n')
         #print self.surf_col_tuple
         cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
         # print 111111111
