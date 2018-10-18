@@ -441,19 +441,24 @@ class start:
                 dis = self.calcu_dis(Atom_cood, DX_cood)
                 if  dis< 6:
                     self.INTERFACE_DIS_6.append(Atom)
-                    self.interface6_resn_number[Atom[17:20]] += 1
+                    if Atom[13:15] == 'CA':
+                      self.interface6_resn_number[Atom[17:20]] += 1
                 if dis < 3:
                     self.INTERFACE_DIS_3.append(Atom)
-                    self.interface3_resn_number[Atom[17:20]] += 1
+                    if Atom[13:15] == 'CA':
+                      self.interface3_resn_number[Atom[17:20]] += 1
                 if dis < 3.5:
                     self.INTERFACE_DIS_35.append(Atom)
-                    self.interface35_resn_number[Atom[17:20]] += 1
+                    if Atom[13:15] == 'CA':
+                      self.interface35_resn_number[Atom[17:20]] += 1
                 if dis < 4:
                     self.INTERFACE_DIS_4.append(Atom)
-                    self.interface4_resn_number[Atom[17:20]] += 1
+                    if Atom[13:15] == 'CA':
+                      self.interface4_resn_number[Atom[17:20]] += 1
                 if dis < 4.5:
                     self.INTERFACE_DIS_45.append(Atom)
-                    self.interface45_resn_number[Atom[17:20]] += 1
+                    if Atom[13:15] == 'CA':
+                      self.interface45_resn_number[Atom[17:20]] += 1
 
         #print self.INTERFACE_DIS_3
         #print self.INTERFACE_DIS_35
