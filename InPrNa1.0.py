@@ -323,21 +323,17 @@ class start:
 
 
             #SELECT INTERFACE
-            chain = self.Sel_Chain(self.INTERFACE_DIS_6)
-            resi = self.Sel_Resi(self.INTERFACE_DIS_6)
-            resn = self.Sel_Resn(self.INTERFACE_DIS_6)
+
 
 
             cmd.select('Nucleic', 'resn DA+DC+DG+DT+DU+A+T+G+C+I+U+5IU')
 
-            cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
-            cmd.create("INTERFACE1", resn + ' and ' + resi + ' and ' + chain)
+            # cmd.select("interface", resn + ' and ' + resi + ' and ' + chain,)
+            self.selector(self.INTERFACE_DIS_6,"interface")
+            cmd.create("INTERFACE1", "interface")
             # cmd.hide()
 
-            chain = self.Sel_Chain(self.All_protein_Atom)
-            resi = self.Sel_Resi(self.All_protein_Atom)
-            resn = self.Sel_Resn(self.All_protein_Atom)
-            cmd.select("protein", resn + ' and ' + resi + ' and ' + chain)
+            self.selector(self.All_protein_Atom,"protein")
             # cmd.hide("everything", "protein")
             # cmd.show("surface","protein")
             # cmd.create("PROTEIN", "protein")
@@ -455,8 +451,9 @@ class start:
 
         self.progress_window = Tk()
 
+
         self.progress_window.title('Calculating')
-        self.progress_window.geometry('530x150')
+        self.progress_window.geometry('630x150')
 
         ## 设置下载进度条
         ttk.Label(self.progress_window, text='Progress:', ).place(x=45, y=60)
@@ -554,7 +551,6 @@ class start:
                     atom_counter = atom_counter + 1
             CX = self.Calcu_PDB_CA_SI(atom_counter)
             # print CX
-            self.progress_window.update()
             if CX < -0.2:
                 shape = "valley"
                 bump_Classify['valley'].append(Cell)
@@ -570,60 +566,10 @@ class start:
                 bump_Classify['peak'].append(Cell)
                 # self.peakCell.append(Cell)
         return bump_Classify
-    def Sel_Chain(self, content):
-        chain = ''
-        mark = 0
-        con_list = []
+    def selector(self,content,sele_name):
         for i in content:
-            con_list.append(i[21])
-        new_list = list(set(con_list))
-        # print new_list
-        for string in new_list:
-            if mark == 0:
-                chain = chain + string
-                mark += 1
-            else:
-                chain = chain + '+' + string
-                mark += 1
-        chain = 'chain ' + chain.replace(' ', '')
-        # print chain
-        return chain
-
-    def Sel_Resi(self, content):
-        resi = ''
-        con_list = []
-        for i in content:
-            con_list.append(i[22:26])
-        new_list = list(set(con_list))
-        # print new_list
-        mark = 0
-        for string in new_list:
-            if mark == 0:
-                resi = resi + string
-                mark += 1
-            else:
-                resi = resi + '+' + string
-                mark += 1
-        resi = 'resi ' + resi.replace(' ', '')
-        # print resi
-        return resi
-
-    def Sel_Resn(self, content):
-        resn = 'resn '
-        con_list = []
-        for i in content:
-            con_list.append(i[17:20])
-        new_list = list(set(con_list))
-        mark = 0
-        for string in new_list:
-            if mark == 0:
-                resn = resn + string
-                mark += 1
-            else:
-                resn = resn + '+' + string
-                mark += 1
-        # print resn
-        return resn
+            # con_list.append(i[17:20])
+            cmd.select(sele_name, ' resn ' +i[17:20]+ ' and  resi' + i[22:26] + ' and chain ' +i[21],merge=1)
 
 
 #################
@@ -1427,6 +1373,7 @@ class Plugin:
         resi = self.Sel_Resi(INTERFACE_CONTENT)
         resn = self.Sel_Resn(INTERFACE_CONTENT)
 
+
         # get interface resn
         resn_list = []
         chain_list = []
@@ -1454,7 +1401,9 @@ class Plugin:
                 interface_vis.append(key)
                 self.Visualization_ScroT.insert(Tkinter.INSERT,key+'\n')
         #print self.surf_col_tuple
-        cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
+
+        # cmd.select("interface", resn + ' and ' + resi + ' and ' + chain)
+        self.selector(INTERFACE_CONTENT,"interface")
         # print 111111111
         cmd.hide('everything','interface')
         cmd.delete("INTERFACE1")
@@ -1602,30 +1551,31 @@ class Plugin:
 
     def select_bump(self):
         #valley
-         chain = self.Sel_Chain(self.bump_Classify_valley['valley'])
-         resi = self.Sel_Resi(self.bump_Classify_valley['valley'])
-         resn = self.Sel_Resn(self.bump_Classify_valley['valley'])
          try:
-             cmd.select("valley", resn + ' and ' + resi + ' and ' + chain)
+             # cmd.select("valley", resn + ' and ' + resi + ' and ' + chain)
+             self.selector(self.bump_Classify_valley['valley'],"valley")
 
              print 'succceed'
          except:
              print "no  valley data input "
         #flat
-         chain = self.Sel_Chain(self.bump_Classify_flat['flat'])
-         resi = self.Sel_Resi(self.bump_Classify_flat['flat'])
-         resn = self.Sel_Resn(self.bump_Classify_flat['flat'])
+         # chain = self.Sel_Chain(self.bump_Classify_flat['flat'])
+         # resi = self.Sel_Resi(self.bump_Classify_flat['flat'])
+         # resn = self.Sel_Resn(self.bump_Classify_flat['flat'])
          try:
-             cmd.select("flat", resn + ' and ' + resi + ' and ' + chain)
+
+             # cmd.select("flat", resn + ' and ' + resi + ' and ' + chain)
+             self.selector(self.bump_Classify_flat['flat'],"flat")
 
          except:
              print "no flat data input"
         #peak
-         chain = self.Sel_Chain(self.bump_Classify_peak['peak'])
-         resi = self.Sel_Resi(self.bump_Classify_peak['peak'])
-         resn = self.Sel_Resn(self.bump_Classify_peak['peak'])
+         # chain = self.Sel_Chain(self.bump_Classify_peak['peak'])
+         # resi = self.Sel_Resi(self.bump_Classify_peak['peak'])
+         # resn = self.Sel_Resn(self.bump_Classify_peak['peak'])
          try:
-             cmd.select("peak", resn + ' and ' + resi + ' and ' + chain)
+             self.selector(self.bump_Classify_peak['peak'],"peak")
+             # cmd.select("peak", resn + ' and ' + resi + ' and ' + chain)
 
          except:
              print "no peak data input "
@@ -1716,6 +1666,12 @@ class Plugin:
         # print resn
         return resn
 
+    def selector(self, content, sele_name):
+        cmd.delete(sele_name)
+        for i in content:
+            # con_list.append(i[17:20])
+            cmd.select(sele_name, ' resn ' + i[17:20] + ' and  resi' + i[22:26] + ' and chain ' + i[21], merge=1)
+
     def GetPDBFilePath(self):
         self.pdbfile = tkFileDialog.askopenfilename()
         self.pdb_file_path.set(pdbfile)
@@ -1738,6 +1694,7 @@ class Plugin:
             # print chain
             # print resi
             # print resn
+
             cmd.select("surf", resn + ' and ' + resi + ' and ' + chain)
             # cmd.color(self.surf_col,'surf')
         else:
@@ -1772,7 +1729,9 @@ class Plugin:
             if __name__ == '__main__':
                 self.parent.destroy()
             else:
+                cmd.delete("*")
                 self.dialog.withdraw()
+
                 print('Done.')
         else:
             self.dialog.withdraw()
