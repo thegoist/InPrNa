@@ -82,7 +82,9 @@ class start:
                             'TYR': 0,
                             'VAL': 0,
                             }
-        self.interface6_resn_number = {'ALA': 0,
+
+
+        self.interface3_resn_number = {'ALA': 0,
                             'ARG': 0,
                             'ASN': 0,
                             'ASP': 0,
@@ -103,27 +105,6 @@ class start:
                             'TYR': 0,
                             'VAL': 0,
                             }
-        self.interface3_resn_number = {'ALA': 0,
-                                       'ARG': 0,
-                                       'ASN': 0,
-                                       'ASP': 0,
-                                       'CYS': 0,
-                                       'GLN': 0,
-                                       'GLU': 0,
-                                       'GLY': 0,
-                                       'HIS': 0,
-                                       'ILE': 0,
-                                       'LEU': 0,
-                                       'LYS': 0,
-                                       'MET': 0,
-                                       'PHE': 0,
-                                       'PRO': 0,
-                                       'SER': 0,
-                                       'THR': 0,
-                                       'TRP': 0,
-                                       'TYR': 0,
-                                       'VAL': 0,
-                                       }
         self.interface35_resn_number = {'ALA': 0,
                                        'ARG': 0,
                                        'ASN': 0,
@@ -187,21 +168,264 @@ class start:
                                        'TYR': 0,
                                        'VAL': 0,
                                        }
+        self.interface5_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface55_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface6_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface65_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface7_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface75_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface8_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface85_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface9_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface95_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface10_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+
+
 
 
         #interface pdb infotmation
-        self.interface6_pdb = []
-        self.interface3_pdb = []
-        self.interface35_pdb = []
-        self.interface4_pdb = []
-        self.interface45_pdb = []
+        self.interface3_lead = []
+        self.interface35_lead = []
+        self.interface4_lead = []
+        self.interface45_lead = []
+        self.interface5_lead = []
+        self.interface55_lead = []
+        self.interface6_lead = []
+        self.interface65_lead = []
+        self.interface7_lead = []
+        self.interface75_lead = []
+        self.interface8_lead = []
+        self.interface85_lead = []
+        self.interface9_lead = []
+        self.interface95_lead = []
+        self.interface10_lead = []
 
 
 
         ##############
         self.DNA_atom = []
         self.protein_atom = []
-##############################
+##############################################
         self.bump_Classify_6 = {'valley':[],
                               'flat':[],
                               'peak':[]}
@@ -213,11 +437,18 @@ class start:
         self.INTERFACE_DIS_35 = []
         self.INTERFACE_DIS_4 = []
         self.INTERFACE_DIS_45 = []
+        self.INTERFACE_DIS_5 = []
+        self.INTERFACE_DIS_55 = []
         self.INTERFACE_DIS_6 = []
-        # root = Tk()
-        # root.destroy()
-        # self.pdb_file_path = StringVar()
-        # root.destroy()
+        self.INTERFACE_DIS_65 = []
+        self.INTERFACE_DIS_7 = []
+        self.INTERFACE_DIS_75 = []
+        self.INTERFACE_DIS_8 = []
+        self.INTERFACE_DIS_85 = []
+        self.INTERFACE_DIS_9 = []
+        self.INTERFACE_DIS_95 = []
+        self.INTERFACE_DIS_10 = []
+
         self.app1 = app
         self.parent = app.root
         self.dialog = Pmw.Dialog(self.parent,
@@ -247,10 +478,21 @@ class start:
             self.plugin.Resn_number = self.Resn_number
             self.plugin.interface6_resn_number = self.interface6_resn_number
 
-            self.plugin.interface3_resn_number  = self.interface3_resn_number
+            self.plugin.interface3_resn_number = self.interface3_resn_number
             self.plugin.interface35_resn_number = self.interface35_resn_number
-            self.plugin.interface4_resn_number  = self.interface4_resn_number
-            self.plugin.interface45_resn_number  = self.interface45_resn_number
+            self.plugin.interface4_resn_number = self.interface4_resn_number
+            self.plugin.interface45_resn_number = self.interface45_resn_number
+            self.plugin.interface5_resn_number = self.interface5_resn_number
+            self.plugin.interface55_resn_number = self.interface55_resn_number
+            self.plugin.interface6_resn_number = self.interface6_resn_number
+            self.plugin.interface65_resn_number = self.interface65_resn_number
+            self.plugin.interface7_resn_number = self.interface7_resn_number
+            self.plugin.interface75_resn_number = self.interface75_resn_number
+            self.plugin.interface8_resn_number = self.interface8_resn_number
+            self.plugin.interface85_resn_number = self.interface85_resn_number
+            self.plugin.interface9_resn_number = self.interface9_resn_number
+            self.plugin.interface95_resn_number = self.interface95_resn_number
+            self.plugin.interface10_resn_number = self.interface10_resn_number
 
 
 
@@ -269,6 +511,22 @@ class start:
             self.plugin.bump_Classify_set["4.5angstrom"] = self.bump_Classify_45
             self.plugin.bump_Classify_set["6angstrom"] = self.bump_Classify_6
 
+            self.plugin.interface3_lead = self.interface3_lead
+            self.plugin.interface35_lead = self.interface35_lead
+            self.plugin.interface4_lead = self.interface4_lead
+            self.plugin.interface45_lead = self.interface45_lead
+            self.plugin.interface5_lead = self.interface5_lead
+            self.plugin.interface55_lead = self.interface55_lead
+            self.plugin.interface6_lead = self.interface6_lead
+            self.plugin.interface65_lead = self.interface65_lead
+            self.plugin.interface7_lead = self.interface7_lead
+            self.plugin.interface75_lead = self.interface75_lead
+            self.plugin.interface8_lead = self.interface8_lead
+            self.plugin.interface85_lead = self.interface85_lead
+            self.plugin.interface9_lead = self.interface9_lead
+            self.plugin.interface95_lead = self.interface95_lead
+            self.plugin.interface10_lead = self.interface10_lead
+
 
             # print "flat"
 
@@ -276,13 +534,21 @@ class start:
             self.plugin.bump_Classify_peak=self.bump_Classify_all
             self.plugin.bump_Classify_valley=self.bump_Classify_all
 
-
-
-            self.plugin.INTERFACE_DIS_3 =  self.INTERFACE_DIS_3
+            self.plugin.INTERFACE_DIS_3 = self.INTERFACE_DIS_3
             self.plugin.INTERFACE_DIS_35 = self.INTERFACE_DIS_35
-            self.plugin.INTERFACE_DIS_4 =  self.INTERFACE_DIS_4
+            self.plugin.INTERFACE_DIS_4 = self.INTERFACE_DIS_4
             self.plugin.INTERFACE_DIS_45 = self.INTERFACE_DIS_45
-            self.plugin.INTERFACE_DIS_6 =  self.INTERFACE_DIS_6
+            self.plugin.INTERFACE_DIS_5 = self.INTERFACE_DIS_5
+            self.plugin.INTERFACE_DIS_55 = self.INTERFACE_DIS_55
+            self.plugin.INTERFACE_DIS_6 = self.INTERFACE_DIS_6
+            self.plugin.INTERFACE_DIS_65 = self.INTERFACE_DIS_65
+            self.plugin.INTERFACE_DIS_7 = self.INTERFACE_DIS_7
+            self.plugin.INTERFACE_DIS_75 = self.INTERFACE_DIS_75
+            self.plugin.INTERFACE_DIS_8 = self.INTERFACE_DIS_8
+            self.plugin.INTERFACE_DIS_85 = self.INTERFACE_DIS_85
+            self.plugin.INTERFACE_DIS_9 = self.INTERFACE_DIS_9
+            self.plugin.INTERFACE_DIS_95 = self.INTERFACE_DIS_95
+            self.plugin.INTERFACE_DIS_10 = self.INTERFACE_DIS_10
 
 
             self.plugin.INTERFACE_CONTENT = self.INTERFACE_DIS_6
@@ -398,27 +664,6 @@ class start:
         ATOM_content = []
         DX_content = []
 
-        # pdb_content_handle = open(pdb_file_name, 'r')
-        # 
-        # for ATOM_Cell in pdb_content_handle:
-        #     if ATOM_Cell[0:4] == 'ATOM':
-        #         if ATOM_Cell[17:20] != ' DA' and \
-        #                         ATOM_Cell[17:20] != ' DT' and \
-        #                         ATOM_Cell[17:20] != ' DG' and \
-        #                         ATOM_Cell[17:20] != ' DC' and \
-        #                         ATOM_Cell[17:20] != '  A' and \
-        #                         ATOM_Cell[17:20] != '  C' and \
-        #                         ATOM_Cell[17:20] != '  G' and \
-        #                         ATOM_Cell[17:20] != '  T' and \
-        #                         ATOM_Cell[17:20] != '  U' and \
-        #                         ATOM_Cell[17:20] != '  I':
-        #             # and \
-        #                         # ATOM_Cell[13:15] == 'CA':
-        #             self.Resn_number[ATOM_Cell[17:20]] += 1
-        #             ATOM_content.append(ATOM_Cell)
-        #
-        # pdb_content_handle.close()
-      
         pdb_content_handle = open(pdb_file_name, 'r')
         for DX_Cell in pdb_content_handle:
             if DX_Cell[0:4] == 'ATOM':
@@ -447,7 +692,7 @@ class start:
 
 
 
-###progress tk window
+#   progress tk window
 
         self.progress_window = Tk()
 
@@ -455,7 +700,7 @@ class start:
         self.progress_window.title('Calculating')
         self.progress_window.geometry('630x150')
 
-        ## 设置下载进度条
+        ## 设置进度条
         ttk.Label(self.progress_window, text='Progress:', ).place(x=45, y=60)
         self.canvas = Canvas(self.progress_window, width=465, height=22, bg="white")
         self.fill_line = self.canvas.create_rectangle(1.5, 1.5, 0, 23, width=0, fill="green")
@@ -470,50 +715,95 @@ class start:
 ##################################
 
         for Atom in ATOM_content:
+            min_dis = 9999
             Atom_cood = [Atom[30:38], Atom[38:46], Atom[46:54]]
             interface_flag = 0
             ####progress
             self.progress_counters = float(self.progress_counters + 465.0 / x)
+            info_6 = ""
             for Dx in DX_content:
                 DX_cood = [Dx[30:38], Dx[38:46], Dx[46:54]]
                 dis = self.calcu_dis(Atom_cood, DX_cood)
+                info = Atom[:26] + " --- " + Dx[:26]
+                if min_dis > dis:
+                    min_dis = dis
+                    info_6 = Atom[:26] + " --- " + Dx[:26]
+
+            if min_dis < 6:
+                self.INTERFACE_DIS_6.append(Atom)
+                self.interface6_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                    self.interface6_resn_number[Atom[17:20]] += 1
+            if min_dis < 3:
+                self.INTERFACE_DIS_3.append(Atom)
+                self.interface3_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface3_resn_number[Atom[17:20]] += 1
+            if min_dis < 3.5:
+                self.INTERFACE_DIS_35.append(Atom)
+                self.interface35_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface35_resn_number[Atom[17:20]] += 1
+            if min_dis < 4:
+                self.INTERFACE_DIS_4.append(Atom)
+                self.interface4_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface4_resn_number[Atom[17:20]] += 1
+            if min_dis < 4.5:
+                self.INTERFACE_DIS_45.append(Atom)
+                self.interface45_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface45_resn_number[Atom[17:20]] += 1
+            if min_dis < 5.5:
+                self.INTERFACE_DIS_55.append(Atom)
+                self.interface55_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface55_resn_number[Atom[17:20]] += 1
+            if min_dis < 6.5:
+                self.INTERFACE_DIS_65.append(Atom)
+                self.interface65_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface65_resn_number[Atom[17:20]] += 1
+            if min_dis < 7:
+                self.INTERFACE_DIS_7.append(Atom)
+                self.interface7_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface7_resn_number[Atom[17:20]] += 1
+            if min_dis < 7.5:
+                self.INTERFACE_DIS_75.append(Atom)
+                self.interface75_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface75_resn_number[Atom[17:20]] += 1
+            if min_dis < 8:
+                self.INTERFACE_DIS_8.append(Atom)
+                self.interface8_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface8_resn_number[Atom[17:20]] += 1
+            if min_dis < 8.5:
+                self.INTERFACE_DIS_85.append(Atom)
+                self.interface85_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface85_resn_number[Atom[17:20]] += 1
+            if min_dis < 9:
+                self.INTERFACE_DIS_9.append(Atom)
+                self.interface9_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface9_resn_number[Atom[17:20]] += 1
+            if min_dis < 9.5:
+                self.INTERFACE_DIS_95.append(Atom)
+                self.interface95_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface95_resn_number[Atom[17:20]] += 1
+            if min_dis < 10:
+                self.INTERFACE_DIS_10.append(Atom)
+                self.interface10_lead.append(info_6)
+                if Atom[13:15] == 'CA':
+                  self.interface10_resn_number[Atom[17:20]] += 1
 
 
-                # print n
-                ######
-                if  dis< 6:
-                    self.INTERFACE_DIS_6.append(Atom)
-
-                    if Atom[13:15] == 'CA':
-                      self.interface6_resn_number[Atom[17:20]] += 1
-                if dis < 3:
-                    self.INTERFACE_DIS_3.append(Atom)
-                    if Atom[13:15] == 'CA':
-                      self.interface3_resn_number[Atom[17:20]] += 1
-                if dis < 3.5:
-                    self.INTERFACE_DIS_35.append(Atom)
-                    if Atom[13:15] == 'CA':
-                      self.interface35_resn_number[Atom[17:20]] += 1
-                if dis < 4:
-                    self.INTERFACE_DIS_4.append(Atom)
-                    if Atom[13:15] == 'CA':
-                      self.interface4_resn_number[Atom[17:20]] += 1
-                if dis < 4.5:
-                    self.INTERFACE_DIS_45.append(Atom)
-                    if Atom[13:15] == 'CA':
-                      self.interface45_resn_number[Atom[17:20]] += 1
 
             self.canvas.coords(self.fill_line, (0, 0, self.progress_counters, 60))
             self.progress_window.update()
-
-
-
-
-        #print self.INTERFACE_DIS_3
-        #print self.INTERFACE_DIS_35
-        #print self.INTERFACE_DIS_4
-        #print self.INTERFACE_DIS_45
-        #print self.INTERFACE_DIS_6
 
         return ATOM_content
         # print Interface_content
@@ -630,7 +920,16 @@ class Plugin:
         self.INTERFACE_DIS_35 = []
         self.INTERFACE_DIS_4 = []
         self.INTERFACE_DIS_45 = []
+        self.INTERFACE_DIS_5 = []
+        self.INTERFACE_DIS_55 = []
         self.INTERFACE_DIS_6 = []
+        self.INTERFACE_DIS_7 = []
+        self.INTERFACE_DIS_75 = []
+        self.INTERFACE_DIS_8 = []
+        self.INTERFACE_DIS_85 = []
+        self.INTERFACE_DIS_9 = []
+        self.INTERFACE_DIS_95 = []
+        self.INTERFACE_DIS_10 = []
 
 
         ################################
@@ -658,7 +957,22 @@ class Plugin:
         cmd.set_color('flat_col', self.flat_col_tuple)
         cmd.set_color('peak_col', self.peak_col_tuple)
 
-
+        #info
+        self.interface3_lead = []
+        self.interface35_lead = []
+        self.interface4_lead = []
+        self.interface45_lead = []
+        self.interface5_lead = []
+        self.interface55_lead = []
+        self.interface6_lead = []
+        self.interface65_lead = []
+        self.interface7_lead = []
+        self.interface75_lead = []
+        self.interface8_lead = []
+        self.interface85_lead = []
+        self.interface9_lead = []
+        self.interface95_lead = []
+        self.interface10_lead = []
         ################################
         self.Resn_number = {'ALA': 0,
                             'ARG': 0,
@@ -682,27 +996,6 @@ class Plugin:
                             'VAL': 0,
                             }
 
-        self.interface6_resn_number = {'ALA': 0,
-                            'ARG': 0,
-                            'ASN': 0,
-                            'ASP': 0,
-                            'CYS': 0,
-                            'GLN': 0,
-                            'GLU': 0,
-                            'GLY': 0,
-                            'HIS': 0,
-                            'ILE': 0,
-                            'LEU': 0,
-                            'LYS': 0,
-                            'MET': 0,
-                            'PHE': 0,
-                            'PRO': 0,
-                            'SER': 0,
-                            'THR': 0,
-                            'TRP': 0,
-                            'TYR': 0,
-                            'VAL': 0,
-                            }
         self.interface3_resn_number = {'ALA': 0,
                                        'ARG': 0,
                                        'ASN': 0,
@@ -767,6 +1060,237 @@ class Plugin:
                                        'VAL': 0,
                                        }
         self.interface45_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface5_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface55_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface6_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface65_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface7_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface75_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface8_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface85_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface9_resn_number = {'ALA': 0,
+                                       'ARG': 0,
+                                       'ASN': 0,
+                                       'ASP': 0,
+                                       'CYS': 0,
+                                       'GLN': 0,
+                                       'GLU': 0,
+                                       'GLY': 0,
+                                       'HIS': 0,
+                                       'ILE': 0,
+                                       'LEU': 0,
+                                       'LYS': 0,
+                                       'MET': 0,
+                                       'PHE': 0,
+                                       'PRO': 0,
+                                       'SER': 0,
+                                       'THR': 0,
+                                       'TRP': 0,
+                                       'TYR': 0,
+                                       'VAL': 0,
+                                       }
+        self.interface95_resn_number = {'ALA': 0,
+                                        'ARG': 0,
+                                        'ASN': 0,
+                                        'ASP': 0,
+                                        'CYS': 0,
+                                        'GLN': 0,
+                                        'GLU': 0,
+                                        'GLY': 0,
+                                        'HIS': 0,
+                                        'ILE': 0,
+                                        'LEU': 0,
+                                        'LYS': 0,
+                                        'MET': 0,
+                                        'PHE': 0,
+                                        'PRO': 0,
+                                        'SER': 0,
+                                        'THR': 0,
+                                        'TRP': 0,
+                                        'TYR': 0,
+                                        'VAL': 0,
+                                        }
+        self.interface10_resn_number = {'ALA': 0,
                                         'ARG': 0,
                                         'ASN': 0,
                                         'ASP': 0,
@@ -889,7 +1413,7 @@ class Plugin:
             #print self.DIS
 
         self.interface_dis_cb = ttk.Combobox(Interface_LF, width=10)
-        self.interface_dis_cb["values"] = (6,3,3.5,4,4.5)
+        self.interface_dis_cb["values"] = (6, 3, 3.5, 4, 4.5, 5, 5.5,  6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10)
 
         self.interface_dis_cb.current(0)
         self.interface_dis_cb.bind("<<ComboboxSelected>>",interface_dis_cb_ch)
@@ -1243,16 +1767,35 @@ class Plugin:
         #print DIS
         try:
             if DIS == 3:
-                self.INFORMATION_SHOW(self.INTERFACE_DIS_3,self.interface3_resn_number)
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_3,self.interface3_resn_number,self.interface3_lead)
             if DIS == 3.5:
-                self.INFORMATION_SHOW(self.INTERFACE_DIS_35,self.interface35_resn_number)
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_35,self.interface35_resn_number,self.interface35_lead)
             if DIS == 4:
-                self.INFORMATION_SHOW(self.INTERFACE_DIS_4,self.interface4_resn_number)
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_4,self.interface4_resn_number,self.interface4_lead)
             if DIS == 4.5:
-                self.INFORMATION_SHOW(self.INTERFACE_DIS_45,self.interface45_resn_number)
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_45, self.interface45_resn_number,self.interface45_lead)
+            if DIS == 5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_5, self.interface5_resn_number,self.interface5_lead)
+            if DIS == 5.5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_55, self.interface55_resn_number,self.interface55_lead)
+            if DIS == 6.5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_65, self.interface65_resn_number,self.interface65_lead)
+            if DIS == 7:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_7, self.interface7_resn_number,self.interface7_lead)
+            if DIS == 7.5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_75, self.interface75_resn_number,self.interface75_lead)
+            if DIS == 8:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_8, self.interface8_resn_number,self.interface8_lead)
+            if DIS == 8.5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_85, self.interface85_resn_number,self.interface85_lead)
+            if DIS == 9:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_9, self.interface9_resn_number,self.interface9_lead)
+            if DIS == 9.5:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_95, self.interface95_resn_number,self.interface95_lead)
+            if DIS == 10:
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_10, self.interface10_resn_number,self.interface10_lead)
             if DIS == 6:
-                #print 'sp'
-                self.INFORMATION_SHOW(self.INTERFACE_DIS_6,self.interface6_resn_number)
+                self.INFORMATION_SHOW(self.INTERFACE_DIS_6,self.interface6_resn_number,self.interface6_lead)
             # cmd.hide("everything", "interface")
         except :
             print 'no data input'
@@ -1366,7 +1909,7 @@ class Plugin:
 
 
 
-    def INFORMATION_SHOW(self,INTERFACE_CONTENT,interface_resn_number):
+    def INFORMATION_SHOW(self,INTERFACE_CONTENT,interface_resn_number,lead_info):
         #print 'step2'
         #print INTERFACE_CONTENT
         chain = self.Sel_Chain(INTERFACE_CONTENT)
@@ -1388,13 +1931,19 @@ class Plugin:
 
         self.Visualization_ScroT.delete(1.0, Tkinter.END)
         self.Visualization_ScroT.insert(1.0, 'INTERFACE :\n')
-        self.Visualization_ScroT.insert(Tkinter.INSERT, 'There are the total of kinds of amino acids in the interface:\n')
 
+        self.Visualization_ScroT.insert(Tkinter.INSERT,
+                                        'There are the total of kinds of amino acids in the interface:\n')
         for key in resn_list:
             self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
             self.Visualization_ScroT.insert(Tkinter.INSERT, str(interface_resn_number[key]) + '  ')
 
-        self.Visualization_ScroT.insert(Tkinter.INSERT,'\n\nInteface(pdb origin data):\n')
+        # info
+        self.Visualization_ScroT.insert(Tkinter.INSERT, '\n\nNucleic acid atom closest to the interface amino acid residue:\n (Amino acid residue -- Nucleic acid atom)\n')
+        for key in lead_info:
+            self.Visualization_ScroT.insert(Tkinter.INSERT, key+"\n")
+
+        self.Visualization_ScroT.insert(Tkinter.INSERT,'\nInteface(pdb origin data):\n')
         interface_vis = []
         for key in INTERFACE_CONTENT:
             if key not in interface_vis:
@@ -1429,28 +1978,7 @@ class Plugin:
             self.ch_valley_col_but['bg'] = self.valley_col
             self.ch_valley_col_but['activebackground'] = self.valley_col
             self.ch_valley_col_but.update()
-           #chain = self.Sel_Chain(self.bump_Classify['valley'])
-           #resi = self.Sel_Resi(self.bump_Classify['valley'])
-           #resn = self.Sel_Resn(self.bump_Classify['valley'])
 
-           #resn_list = []
-           #chain_list = []
-           #resi_list = []
-           #for i in self.bump_Classify['valley']:
-           #    resn_list.append(i[17:20])
-           #    resi_list.append(i[22:26])
-           #    chain_list.append(i[21])
-           #resn_list = list(set(resn_list))
-           #chain_list = list(set(chain_list))
-           #resi_list = list(set(resi_list))
-           ## scrotext update
-           #self.Visualization_ScroT.delete(1.0, Tkinter.END)
-           #self.Visualization_ScroT.insert(1.0, 'Vally  :\n')
-           #self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
-
-           #for key in resn_list:
-           #    self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-           #    self.Visualization_ScroT.insert(Tkinter.INSERT, str(self.Resn_number[key]) + '\n')
 
             #cmd.select("valley", resn + ' and ' + resi + ' and ' + chain)
             cmd.set_color('valley_col', self.valley_col_tuple)
@@ -1465,28 +1993,6 @@ class Plugin:
             self.ch_flat_col_but['bg'] = self.flat_col
             self.ch_flat_col_but['activebackground'] = self.flat_col
             self.ch_flat_col_but.update()
-
-
-            #resn_list = []
-            #chain_list = []
-            #resi_list = []
-            #for i in self.bump_Classify['flat']:
-            #    resn_list.append(i[17:20])
-            #    resi_list.append(i[22:26])
-            #    chain_list.append(i[21])
-            #resn_list = list(set(resn_list))
-            #chain_list = list(set(chain_list))
-            #resi_list = list(set(resi_list))
-            ## scrotext update
-            #self.Visualization_ScroT.delete(1.0, Tkinter.END)
-            #self.Visualization_ScroT.insert(1.0, 'flat  :\n')
-            #self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
-
-            #for key in resn_list:
-            #    self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-            #    self.Visualization_ScroT.insert(Tkinter.INSERT, str(self.Resn_number[key]) + '\n')
-
-
             cmd.set_color('flat_col', self.flat_col_tuple)
             cmd.color('flat_col', 'flat')
 
@@ -1499,26 +2005,6 @@ class Plugin:
             self.ch_peak_col_but['bg'] = self.peak_col
             self.ch_peak_col_but['activebackground'] = self.peak_col
             self.ch_peak_col_but.update()
-            #resn_list = []
-            #chain_list = []
-            #resi_list = []
-            #for i in self.bump_Classify['peak']:
-            #    resn_list.append(i[17:20])
-            #    resi_list.append(i[22:26])
-            #    chain_list.append(i[21])
-            #resn_list = list(set(resn_list))
-            #chain_list = list(set(chain_list))
-            #resi_list = list(set(resi_list))
-            ## scrotext update
-            #self.Visualization_ScroT.delete(1.0, Tkinter.END)
-            #self.Visualization_ScroT.insert(1.0, 'Vally  :\n')
-            #self.Visualization_ScroT.insert(Tkinter.INSERT, 'RESN:\n')
-#
-            #for key in resn_list:
-            #    self.Visualization_ScroT.insert(Tkinter.INSERT, key + ' ')
-            #    self.Visualization_ScroT.insert(Tkinter.INSERT, str(self.Resn_number[key]) + '\n')
-
-
             cmd.set_color('peak_col', self.peak_col_tuple)
             cmd.color('peak_col', 'peak')
 
